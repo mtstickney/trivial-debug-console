@@ -4,7 +4,7 @@
   implementations like SBCL and CLISP produce "text-mode" executable
   images on windows, which means they pop up a console window when
   run. You could create a launcher to hide the window, but then you
-  can't do any debugging in the image.
+  couldn't do any debugging in the image.
 
   =trivial-debug-console= lets you wrap a function such that the
   console window will be un-hidden whenever the debugger is entered,
