@@ -1,0 +1,28 @@
+* About
+  =trivial-debug-console= is a tiny little library to make writing GUI
+  applications in Common Lisp easier on Windows. The free lisp
+  implementations like SBCL and CLISP produce "text-mode" executable
+  images on windows, which means they pop up a console window when
+  run. You could create a launcher to hide the window, but then you
+  can't do any debugging in the image.
+
+  =trivial-debug-console= lets you wrap a function such that the
+  console window will be un-hidden whenever the debugger is entered,
+  and re-hidden after the condition has been handled. You get the
+  console window for just as long as you need it, then it gets out of
+  your way.
+
+* Usage
+  There are two ways to use =trivial-debug-console=:
+  1. =(debuggify func &rest args)= will apply =func= to =args= with
+     the debug wrapper.
+  2. =(with-debug-console &body body)= will wrap =body= in a lambda
+     and pass it to =debuggify=, to make wrapping a series of actions
+     easier.
+
+* Notes
+  - This only works on windows (I'm still thinking about how to make
+    it work on X-windows systems).
+  - =trivial-debug-console= goes to lengths to not disrupt normal
+    error-handling mechanisms. =*DEBUGGER-HOOK*= and the regular
+    error-handling mechanisms should all work normally.
