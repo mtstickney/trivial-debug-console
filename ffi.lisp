@@ -2,10 +2,10 @@
 
 ;;; FFI definitions for GetConsoleWindow and ShowWindow
 (cffi:define-foreign-library kernel32
-  ((:win32 :mswindows) "kernel32.dll"))
+  ((:or :win32 :mswindows) "kernel32.dll"))
 
 (cffi:define-foreign-library user32
-  ((:win32 :mswindows) "user32.dll"))
+  ((:or :win32 :mswindows) "user32.dll"))
 
 (cffi:use-foreign-library kernel32)
 (cffi:use-foreign-library user32)
