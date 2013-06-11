@@ -1,4 +1,4 @@
-(in-package #:cl-debug-console)
+(in-package #:trivial-debug-console)
 
 ;;; FFI definitions for GetConsoleWindow and ShowWindow
 (cffi:define-foreign-library kernel32
