@@ -7,5 +7,5 @@
   :license "Specify license here"
   :depends-on (:cffi)
   :components ((:file "package")
-               (:file "ffi.lisp")
+               (:file "ffi")
                (:file "trivial-debug-console")))
