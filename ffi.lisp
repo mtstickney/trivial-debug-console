@@ -24,10 +24,10 @@
   (:show-no-activate 4)
   (:show-normal 1))
 
-(cffi:defcfun (console-window "GetConsoleWindow" :library kernel32) :pointer
+(cffi:defcfun (console-window "GetConsoleWindow") :pointer
   "Return a handle to the calling process's console window.")
 
-(cffi:defcfun (show-window "ShowWindow" :library user32) :int
+(cffi:defcfun (show-window "ShowWindow") :int
   "Set the show state of the specified window."
   (hwnd :pointer)
   (type show-type))
