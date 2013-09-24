@@ -2,8 +2,8 @@
 
 (asdf:defsystem #:trivial-debug-console
   :serial t
-  :description "Describe cl-debug-console here"
-  :author "Your Name <your.name@example.com>"
+  :description "A library for a well-behaved debug console"
+  :author "Matthew Stickney <mtstickney@gmail.com>"
   :license "Specify license here"
   :depends-on (:cffi)
   :components ((:file "package")
