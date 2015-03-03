@@ -2,9 +2,9 @@
 
 (asdf:defsystem #:trivial-debug-console
   :serial t
-  :description "A library for a well-behaved debug console"
+  :description "A library to provide a well-behaved debug console."
   :author "Matthew Stickney <mtstickney@gmail.com>"
-  :license "Specify license here"
+  :license "MIT"
   :depends-on (:cffi)
   :components ((:file "package")
                (:file "ffi")
